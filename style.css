@@ -1,0 +1,126 @@
+* {
+    /* box-sizing: border-box; */
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    /* position: relative; */
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(78, 78, 217);
+}
+.container{
+  position: relative;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  height: 400px;
+  width: 400px;
+  }
+.cup{
+    position:relative;
+    width: 100px;
+    height: 130px;
+    background: linear-gradient(to right,#f4f6f7,rgb(238, 240, 241));
+    border-bottom-right-radius: 45%;
+    border-bottom-left-radius: 45%;
+}
+ .top{
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to right,rgb(227, 231, 234),hwb(180 91% 7%));
+    border-radius: 50%;
+}
+.circle{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    height: 50px;
+    width:calc(100% - 20px);
+    background: linear-gradient(to left,rgb(237, 219, 228),rgba(244, 238, 241, 0.55));
+    border-radius: 50%;
+    /* z-index: 5; */
+    box-sizing: border-box;
+    overflow: hidden;
+}  
+.tea{
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    height: 100%;
+    width:100%;
+    background: linear-gradient(to left,rgb(240, 129, 18),rgba(228, 70, 8, 0.55));
+    border-radius: 50%;
+}
+.handle{
+    position: absolute;
+    top: 5px;
+    left: 23px;
+    height: 53px;
+    width:90px;
+    border: 20px solid #f4f6f7;
+    border-left: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-radius: 50%;
+    transform: rotate(-50deg);
+}
+.plate{
+    position: absolute;
+    top:190px;
+    height: 100px;
+    width:200px;
+    border: 9px solid #f4f6f7;
+    /* opacity:0.1; */
+    /* border: 20px solid #3ebf4f; */
+   background-color: antiquewhite;
+    border-radius: 50%;
+    box-shadow:0 10px 10px rgb(104, 98, 98) ;
+    /* background: radial-gradient(); */
+}
+.vapour{
+    position: relative;
+display:flex;
+z-index: 1;
+padding:0 20px;
+}
+.vapour span{
+position: relative;
+display:block;
+bottom: 20px;
+min-width:4px;
+height: 70px;
+border-radius: 50%;
+background: red;
+animation: waves 3s linear infinite;
+opacity: 0;
+filter: blur(8px);
+animation-delay: calc(var(--i)*-0.5s);
+}
+@keyframes waves {
+    0%{
+        transform: translateY(0)scaleX(1);
+        opacity: 0;
+    }
+    15%{
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(-150px)scaleX(5);
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-300px)scaleX(10);
+    }
+    /* 50%{
+        transform: translateY(0)scaleX(1);
+    } */
+}
